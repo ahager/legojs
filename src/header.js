@@ -17,7 +17,7 @@
  *   http://github.com/tybenz
  *   http://twitter.com/tybenz
  *
- *   License: https://raw.github.com/tybenz/legojs/master/LICENSE.txt
+ *   License: https://github.com/tybenz/legojs/blob/master/LICENSE.txt
  *
  *
  */
