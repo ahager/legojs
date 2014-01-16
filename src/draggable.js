@@ -1,8 +1,8 @@
 /* vim: set tabstop=4 softtabstop=4 shiftwidth=4 expandtab: */
 
-define( 'draggable', [ 'lego' ],
-function ( Lego ) {
-    var Draggable = Lego.DragTracker.extend({
+define( 'draggable', [ 'drag-tracker' ],
+function ( DragTracker ) {
+    var Draggable = DragTracker.extend({
         defaultOptions: {
             dragThreshold:  5,
             ignoreX: false,

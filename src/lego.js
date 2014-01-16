@@ -1,7 +1,7 @@
 /* vim: set tabstop=4 softtabstop=4 shiftwidth=4 expandtab: */
 
-define( 'lego', [ 'class' ],
-function( Class ) {
+define( 'lego', [ 'jquery', 'class' ],
+function( $, Class ) {
     var Lego = Class._extend({
         defaultOptions: {},
 
@@ -26,7 +26,9 @@ function( Class ) {
     // Custom extend does an automatic extend of defaultOptions
     Lego.extend = function ( proto ) {
         proto.defaultOptions = $.extend( {}, this.prototype.defaultOptions, proto.defaultOptions );
-        return this._extend( proto );
+        var newClass = this._extend( proto );
+        newClass.extend = Lego.extend;
+        return newClass;
     }
 
     return Lego;

@@ -1,6 +1,6 @@
 /* vim: set tabstop=4 softtabstop=4 shiftwidth=4 expandtab: */
 
-define( 'namepsace', [
+define( 'namespace', [
     'lego',
     'drag-tracker',
     'draggable',
@@ -14,7 +14,7 @@ define( 'namepsace', [
 
     Lego.RadioGroup = RadioGroup;
 
-    Lego.TabGroup = TabGroup;
+    Lego.Tabs = Tabs;
 
     Lego.PanelGroup = PanelGroup;
 

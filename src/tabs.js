@@ -31,4 +31,4 @@ function ( RadioGroup ) {
     });
 
     return Tabs;
-})();
+});
