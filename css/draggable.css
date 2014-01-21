@@ -1,0 +1,15 @@
+/* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab: */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.draggable {
+  position: absolute;
+  top: 70px;
+  left: 0;
+}
+.draggable.icon {
+  font-size: 12rem;
+}

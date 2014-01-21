@@ -75,7 +75,7 @@ function ( Lego ) {
                     return false;
                 }
 
-                dragStarted = true;
+                this.dragStarted = true;
 
                 this.dragStart( 0, 0 );
             }
@@ -86,11 +86,13 @@ function ( Lego ) {
         },
 
         _stopDrag: function ( evt, data ) {
+            var opts = this.options;
+
             this._removeDragHandlers();
 
             if ( this.dragStarted ) {
                 var dx = evt.pageX - this.startX,
-                    dt = evt.pageY - this.startY;
+                    dy = evt.pageY - this.startY;
 
                 this.dragStop( opts.ignoreX ? 0 : dx, opts.ignoreY ? 0 : dy );
             }

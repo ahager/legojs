@@ -135,3 +135,8 @@ footer {
     @include content-inner;
   }
 }
+
+@import "tabs.scss";
+@import "panels.scss";
+@import "draggable.scss";
+@import "spinner.scss";

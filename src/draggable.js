@@ -35,8 +35,7 @@ function ( DragTracker ) {
         },
 
         setPosition: function ( x, y ) {
-            var positioning = this.options.positioning,
-                $el = this.$el;
+            var $el = this.$el;
 
             if ( this.options.useTransforms ) {
                 transform = ( x ? 'translateX(' + x + ') ' : '' ) + ( y ? 'translateY(' + y + ')' : '');

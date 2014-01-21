@@ -1,0 +1,14 @@
+/* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab: */
+
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+@import '_colors.scss';
+
+.draggable {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  &.icon {
+    font-size: 12rem;
+  }
+}

@@ -8,8 +8,19 @@ require.config({
 });
 
 require([
-    'lego'
-], function ( Lego ) {
-    var t = new Lego();
-    console.log(t.options);
+    'lego',
+    'radio-group',
+    'tabs',
+    'panel-group',
+    'draggable',
+    'numeric-spinner'
+], function ( Lego, RadioGroup, Tabs, PanelGroup, Draggable, NumericSpinner ) {
+    var t = new RadioGroup( '.tabs a' );
+    var p = new PanelGroup( '.panel', {
+        tabGroups: [ t ]
+    });
+
+    var d = new Draggable( '.draggable' );
+
+    var ns = new NumericSpinner( '.numeric-input-wrapper' );
 });

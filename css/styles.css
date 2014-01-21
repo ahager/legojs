@@ -178,3 +178,141 @@ footer nav {
   min-width: 18rem;
   margin: 0 auto;
 }
+
+/* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab: */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #dddddd;
+}
+.tabs a {
+  color: inherit;
+  font-weight: 400;
+  display: block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 3px 3px 0 0;
+  text-decoration: none;
+}
+.tabs a.active {
+  position: relative;
+  top: 1px;
+  border: 1px solid #dddddd;
+  border-bottom: 1px solid #fffefc;
+}
+
+/* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab: */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.panel {
+  display: none;
+}
+.panel.active {
+  display: block;
+}
+
+/* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab: */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.draggable {
+  position: absolute;
+  top: 70px;
+  left: 0;
+}
+.draggable.icon {
+  font-size: 12rem;
+}
+
+/* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab: */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.numeric-input-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  border: 1px solid #aaaaaa;
+  border-top: none;
+  border-radius: 3px;
+}
+
+.button {
+  font-size: 0.5em;
+  color: inherit;
+  padding: 0.2em 1em 0.1em;
+  border-top: 1px solid #aaaaaa;
+  text-decoration: none;
+  min-height: 17px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.button:hover, .button:active {
+  color: inherit;
+  text-decoration: none;
+}
+.button.up {
+  border-radius: 3px 3px 0 0;
+}
+.button.down {
+  border-radius: 0 0 3px 3px;
+}
+
+.numeric-input {
+  border: 1px solid #aaaaaa;
+  background-color: white;
+  margin: 0 0 0 0.3em;
+  font-size: 1.1em;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 0.4em 0.5em;
+  border-radius: 3px;
+}
