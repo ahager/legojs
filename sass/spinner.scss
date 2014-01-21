@@ -6,6 +6,7 @@
 
 .numeric-input-wrapper {
   @include display(flex);
+  margin: 2rem 0;
 }
 
 .buttons {
@@ -47,4 +48,9 @@
   font-family: Helvetica, Arial, sans-serif;
   padding: 0.4em 0.5em;
   border-radius: 3px;
+  outline: none;
+
+  &:focus {
+    @include box-shadow(0 0 2px 0 tint($olive, 10%));
+  }
 }

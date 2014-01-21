@@ -10,7 +10,7 @@ function ( Lego, DragTracker ) {
             inputSelector: ".numeric-input",
             incrementKeyCodes: [ 38 ],
             decrementKeyCodes: [ 40 ],
-            pressAndHoldInterval: 200
+            pressAndHoldInterval: 100
         },
 
         init: function ( el, options ) {
@@ -34,22 +34,20 @@ function ( Lego, DragTracker ) {
                 ignoreX: true,
 
                 dragStart: function ( tracker, dx, dy ) {
-                    console.log("START", self.value);
-                    self.value = parseInt( self.$input.val() );
+                    self.value = parseInt( self.$input.val() ) || 0;
                 },
 
                 dragUpdate: function ( tracker, dx, dy ) {
-                    console.log(dy);
                     self.$input.val( Math.floor( self.value - ( dy / 3 ) ) );
                 }
             });
 
-            this.$input.on( 'input', function ( evt ) {
-                if ( incrementKeyCodes.contains( evt.which ) ) {
-                    evt.prevenDefault();
+            this.$input.on( 'keydown', function ( evt ) {
+                if ( incrementKeyCodes.indexOf( evt.which ) != -1 ) {
+                    evt.preventDefault();
                     self._incrementValue();
-                } else if ( decrementKeyCodes.contains( evt.which ) ) {
-                    evt.prevenDefault();
+                } else if ( decrementKeyCodes.indexOf( evt.which ) != -1 ) {
+                    evt.preventDefault();
                     self._decrementValue();
                 }
             });
@@ -82,13 +80,13 @@ function ( Lego, DragTracker ) {
         },
 
         _decrementValue: function () {
-            var val = parseInt( this.$input.val() );
+            var val = parseInt( this.$input.val() ) || 0;
 
             this.$input.val( val - 1 );
         },
 
         _incrementValue: function () {
-            var val = parseInt( this.$input.val() );
+            var val = parseInt( this.$input.val() ) || 0;
 
             this.$input.val( val + 1 );
         }
