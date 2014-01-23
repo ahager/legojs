@@ -25,7 +25,7 @@ html {
   height: 100%;
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
-  font-size: 100%;
+  font-size: 110%;
 }
 
 body {
@@ -146,13 +146,12 @@ footer {
 }
 
 .slideout-wrapper {
-  height: 2rem;
-  overflow: hidden;
+  height: 0;
 }
 
 .slideout {
+  z-index: -1;
   position: relative;
-  height: 100%;
   color: $white;
   font-weight: bold;
   font-size: 0.9rem;
@@ -161,7 +160,7 @@ footer {
   @include transition-property (transform);
   @include transition-duration(0.1s);
   @include transition-timing-function(ease-in);
-  @include transform(translateY(-100%));
+  @include transform(translateY(-200%));
 
   .spacer-left {
     @include flex(2.2);
@@ -184,6 +183,14 @@ footer {
 }
 
 @include media(max-width 20rem) {
+  html {
+    font-size: 100%;
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+  }
+
   .slideout .spacer-left, .slideout .spacer-right {
     background-color: $dark-gray;
     @include flex(1);

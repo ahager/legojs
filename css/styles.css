@@ -12,7 +12,7 @@ html {
   height: 100%;
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
-  font-size: 100%;
+  font-size: 110%;
 }
 
 body {
@@ -186,13 +186,12 @@ footer nav {
 }
 
 .slideout-wrapper {
-  height: 2rem;
-  overflow: hidden;
+  height: 0;
 }
 
 .slideout {
+  z-index: -1;
   position: relative;
-  height: 100%;
   color: white;
   font-weight: bold;
   font-size: 0.9rem;
@@ -221,11 +220,11 @@ footer nav {
   -webkit-transition-timing-function: ease-in;
   -moz-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%);
+  -webkit-transform: translateY(-200%);
+  -moz-transform: translateY(-200%);
+  -ms-transform: translateY(-200%);
+  -o-transform: translateY(-200%);
+  transform: translateY(-200%);
 }
 .slideout .spacer-left {
   -webkit-box-flex: 2.2;
@@ -260,6 +259,14 @@ footer nav {
 }
 
 @media screen and (max-width: 20rem) {
+  html {
+    font-size: 100%;
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+  }
+
   .slideout .spacer-left, .slideout .spacer-right {
     background-color: #232323;
     -webkit-box-flex: 1;
