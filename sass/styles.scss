@@ -50,6 +50,20 @@ a {
   text-decoration: none;
 }
 
+.nav-link a {
+  display: block;
+  padding: 0.5rem;
+  @include transition(all 0.15s ease-in);
+
+  &:hover, &:active, &.active {
+    background-color: $dark-olive;
+  }
+}
+
+.nav-link.active a {
+  background-color: $dark-olive;
+}
+
 h1, h2, h3, h4, h5 {
   margin: 0.25em 0;
 
@@ -113,17 +127,6 @@ header {
   .spacer {
     @include flex(1);
   }
-
-  .nav-link a {
-    display: block;
-    padding: 0.5rem;
-    @include transition(background-color 0.15s ease-in);
-
-    &:hover, &:active, &.active {
-      background-color: $dark-olive;
-      @include noise;
-    }
-  }
 }
 
 footer {
@@ -139,6 +142,51 @@ footer {
     @include display(flex);
     @include justify-content(space-between);
     @include content-inner;
+  }
+}
+
+.slideout-wrapper {
+  height: 2rem;
+  overflow: hidden;
+}
+
+.slideout {
+  position: relative;
+  height: 100%;
+  color: $white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  @include display(flex);
+  @include justify-content(center);
+  @include transition-property (transform);
+  @include transition-duration(0.1s);
+  @include transition-timing-function(ease-in);
+  @include transform(translateY(-100%));
+
+  .spacer-left {
+    @include flex(2.2);
+  }
+
+  .spacer-right {
+    @include flex(1);
+  }
+
+  .nav-link a {
+    background-color: $dark-gray;
+    &:hover, &:active, &.active {
+      background-color: $dark-gray;
+    }
+  }
+
+  &.active {
+    @include transform(translateY(0));
+  }
+}
+
+@include media(max-width 20rem) {
+  .slideout .spacer-left, .slideout .spacer-right {
+    background-color: $dark-gray;
+    @include flex(1);
   }
 }
 
