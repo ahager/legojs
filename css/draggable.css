@@ -2,8 +2,7 @@
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .draggable {
   position: absolute;
@@ -12,14 +11,11 @@
   background-color: #fffefc;
   border-radius: 180px;
   height: 179px;
-  width: 180px;
-}
-.draggable.icon {
-  font-size: 12rem;
-}
-.draggable .fa {
-  position: relative;
-  top: -33px;
-}
+  width: 180px; }
+  .draggable.icon {
+    font-size: 12rem; }
+  .draggable .fa {
+    position: relative;
+    top: -33px; }
 
 /*# sourceMappingURL=draggable.css.map */

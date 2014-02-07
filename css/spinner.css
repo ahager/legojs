@@ -2,8 +2,7 @@
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .numeric-input-wrapper {
   display: -webkit-box;
@@ -13,8 +12,7 @@
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 2rem 0;
-}
+  margin: 2rem 0; }
 
 .buttons {
   display: -webkit-box;
@@ -33,8 +31,7 @@
   -ms-flex-direction: column;
   border: 1px solid #aaaaaa;
   border-top: none;
-  border-radius: 3px;
-}
+  border-radius: 3px; }
 
 .button {
   font-size: 0.5em;
@@ -49,18 +46,14 @@
   -webkit-flex: 1;
   -moz-flex: 1;
   -ms-flex: 1;
-  flex: 1;
-}
-.button:hover, .button:active {
-  color: inherit;
-  text-decoration: none;
-}
-.button.up {
-  border-radius: 3px 3px 0 0;
-}
-.button.down {
-  border-radius: 0 0 3px 3px;
-}
+  flex: 1; }
+  .button:hover, .button:active {
+    color: inherit;
+    text-decoration: none; }
+  .button.up {
+    border-radius: 3px 3px 0 0; }
+  .button.down {
+    border-radius: 0 0 3px 3px; }
 
 .numeric-input {
   border: 1px solid #aaaaaa;
@@ -70,10 +63,8 @@
   font-family: Helvetica, Arial, sans-serif;
   padding: 0.4em 0.5em;
   border-radius: 3px;
-  outline: none;
-}
-.numeric-input:focus {
-  box-shadow: 0 0 2px 0 #50a37e;
-}
+  outline: none; }
+  .numeric-input:focus {
+    box-shadow: 0 0 2px 0 #50a37e; }
 
 /*# sourceMappingURL=spinner.css.map */

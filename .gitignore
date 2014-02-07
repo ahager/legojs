@@ -3,3 +3,4 @@
 .DS_Store
 sass/bourbon/
 sass/neat/
+.bundle/
