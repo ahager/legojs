@@ -24,11 +24,4 @@ require([
     var d = new Draggable( '.draggable' );
 
     var ns = new NumericSpinner( '.numeric-input-wrapper' );
-
-    $( '.nav-link.toggle-dropdown' ).on( 'click', function ( evt ) {
-        evt.preventDefault();
-
-        $( this ).toggleClass( 'active' );
-        $( '.slideout' ).toggleClass( 'active' );
-    });
 });

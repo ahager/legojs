@@ -1,6 +1,0 @@
-{
-"version": 3,
-"mappings": ";AACE,CAAE;ECYI,kBAAoB,EDXJ,UAAU;ECgB1B,eAAiB,EDhBD,UAAU;EC+B1B,UAAY,ED/BI,UAAU;;;AEIlC,UAAW;EACT,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,KAAK;EACV,IAAI,EAAE,IAAI;EACV,gBAAgB,EAAE,OAAkB;EACpC,aAAa,EAAE,KAAK;EACpB,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;;AACZ,eAAO;EACL,SAAS,EAAE,KAAK;;AAGlB,cAAI;EACF,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,KAAK",
-"sources": ["../sass/neat/grid/_grid.scss","../sass/bourbon/addons/_prefixer.scss","../sass/draggable.scss"],
-"file": "draggable.css"
-}
