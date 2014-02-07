@@ -7,9 +7,19 @@
 
 .draggable {
   position: absolute;
-  top: 70px;
-  left: 0;
+  top: 110px;
+  left: 18px;
+  background-color: #fffefc;
+  border-radius: 180px;
+  height: 179px;
+  width: 180px;
 }
 .draggable.icon {
   font-size: 12rem;
 }
+.draggable .fa {
+  position: relative;
+  top: -33px;
+}
+
+/*# sourceMappingURL=draggable.css.map */

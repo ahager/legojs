@@ -23,15 +23,19 @@ function ( DragTracker ) {
         dragStart: function ( dx, dy ) {
             var opts = this.options;
 
-            this.setPosition( opts.ignoreX ? null : this.startX + dx, opts.ignoreY ? null : this.startY + dy );
+            this.startTop = parseInt( this.$el.css( 'top' ) );
+            this.startLeft = parseInt( this.$el.css( 'left' ) );
+
+            this.setPosition( opts.ignoreX ? null : this.startLeft + dx, opts.ignoreY ? null : this.startTop + dy );
         },
 
         dragUpdate: function ( dx, dy ) {
-            this.dragStart( dx, dy );
+            var opts = this.options;
+            this.setPosition( opts.ignoreX ? null : this.startLeft + dx, opts.ignoreY ? null : this.startTop + dy );
         },
 
         dragStop: function ( dx, dy ) {
-            this.dragStart( dx, dy );
+            this.dragUpdate( dx, dy );
         },
 
         setPosition: function ( x, y ) {
