@@ -5,6 +5,10 @@ by [Tyler Benziger](http://twitter.com/tybenz)
 
 This git repo is just a basic sketch of concepts conveyed in my
 [JS Legos](http://tybenz.com/presentation-legos) talk.
+This is not a production-ready library.
+
+Maybe, if we get enough people contributing, we could do more to
+implement and test new features. See [contributing](#contributing)
 
 # Building form source
 
