@@ -6,8 +6,9 @@ define( 'namespace', [
     'draggable',
     'radio-group',
     'tabs',
-    'panel-group'
-], function ( Lego, DragTracker, Draggable, RadioGroup, Tabs, PanelGroup ) {
+    'panel-group',
+    'numeric-spinner'
+], function ( Lego, DragTracker, Draggable, RadioGroup, Tabs, PanelGroup, NumericSpinner ) {
     Lego.DragTracker = DragTracker;
 
     Lego.Draggable = Draggable;
@@ -17,6 +18,8 @@ define( 'namespace', [
     Lego.Tabs = Tabs;
 
     Lego.PanelGroup = PanelGroup;
+
+    Lego.NumericSpinner = NumericSpinner;
 
     return Lego;
 });
