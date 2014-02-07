@@ -23,5 +23,17 @@ require([
 
     var d = new Draggable( '.draggable' );
 
-    var ns = new NumericSpinner( '.numeric-input-wrapper' );
+    var ns = new NumericSpinner( '.numeric-spinner-wrapper', {
+        inputSelector: '.numeric-spinner'
+    });
+
+    var fo = new Flyout( '.flyout', {
+        trigger: $( '.trigger' ),
+        positionAround: {
+            position: 'right',
+            positionOffset: 15,
+            align: 'top',
+            alignOffset: -10
+        }
+    });
 });

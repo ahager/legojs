@@ -1,0 +1,144 @@
+html {
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 1em;
+}
+
+a {
+  color: inherit;
+}
+
+.tabs {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.tabs li {
+  float: left;
+}
+
+.tabs li a {
+  display: block;
+  margin: 0 0 0 -1px;
+  padding: 0.5em 1.5em;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 1px 0 1px;
+  text-decoration: none;
+}
+
+.tabs li:first-child a {
+  margin-left: 0;
+}
+
+.tabs li a.active {
+  background: black;
+  color: white;
+}
+
+.tabs li a:hover {
+  background: grey;
+  color: white;
+}
+
+.panel {
+  max-width: 400px;
+  min-height: 300px;
+  display: none;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+.panel.active {
+  display: block;
+}
+
+.draggable {
+  background: black;
+  color: white;
+  padding: 0 0.2em;
+  border-radius: 7px;
+  font-size: 4em;
+  position: absolute;
+  top: 6rem;
+  left: 1rem;
+}
+
+.numeric-spinner-wrapper {
+  overflow: hidden;
+}
+
+.numeric-spinner-wrapper > * {
+  float: left;
+}
+
+.numeric-spinner-wrapper .button {
+  display: block;
+  padding: 2px 10px;
+  font-size: 0.4em;
+  text-decoration: none;
+  border: 1px solid black;
+}
+
+.numeric-spinner-wrapper .button:last-child {
+  margin-top: -1px;
+}
+
+.numeric-spinner-wrapper input {
+  border: 1px solid black;
+  margin: 0;
+  font-size: 1em;
+  padding: 0.5em;
+  margin-left: -1px;
+  outline: none;
+}
+
+.flyout {
+  position: absolute;
+  border: 1px solid black;
+  background: white;
+  display: none;
+  padding: 1em;
+}
+
+.flyout::after {
+  content: '';
+  display: block;
+  border: 1px solid black;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  background: white;
+  position: absolute;
+  top: 14px;
+  left: -6px;
+  width: 10px;
+  height: 10px;
+}
+
+.flyout::before {
+  content: '';
+  display: block;
+  background: white;
+  width: 10px;
+  height: 16px;
+  position: absolute;
+  top: 12px;
+  left: 0;
+  z-index: 1;
+}
+
+.flyout.show {
+  display: block;
+}
