@@ -4,3 +4,5 @@
 sass/bourbon/
 sass/neat/
 .bundle/
+bower_components/
+node_modules/
