@@ -1,3 +1,4 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 html {
   font-family: "Raleway", sans-serif;
   font-weight: 100;
@@ -141,4 +142,78 @@ a {
 
 .flyout.show {
   display: block;
+}
+
+.slideshow-wrapper {
+  width: 500px;
+}
+
+.slideshow {
+  /* display: flex; */
+  overflow: hidden;
+}
+
+.slideshow .thumb-container, .slideshow .slideshow-clip {
+  float: left;
+}
+
+.slideshow-slide-link {
+  width: 50px;
+  height: 20px;
+  padding: 15px 0;
+  display: block;
+  text-align: center;
+  border: 1px solid black;
+  text-decoration: none;
+  margin-top: -1px;
+}
+
+.slideshow-slide-link:first-child {
+  margin-top: 0;
+}
+
+.slideshow-slide-link.active {
+  box-shadow: 0 0 0 2px black inset;
+}
+
+.slideshow-clip {
+  height: 254px;
+  width: 447px;
+  border: 1px solid black;
+  border-left: none;
+}
+
+.slideshow-view {
+  height: 100%;
+}
+
+.slideshow-slide {
+  float: left;
+  height: 60%;
+  width: 0;
+  overflow: hidden;
+  font-size: 4em;
+  text-align: center;
+  padding: 20% 0;
+}
+
+.slideshow-slide.active {
+  width: 100%;
+}
+
+.slideshow-wrapper .control-panel {
+  margin-top: 0.5em;
+  overflow: hidden;
+}
+
+.slideshow-wrapper .controls {
+  float: right;
+}
+
+.slideshow-wrapper .controls a {
+  text-decoration: none;
+  font-size: 0.8em;
+  padding: 0.3em;
+  border: 1px solid black;
+  margin: 0 0 1px 0.5em;
 }

@@ -14,8 +14,9 @@ require([
     'panel-group',
     'draggable',
     'numeric-spinner',
-    'flyout'
-], function ( Lego, RadioGroup, Tabs, PanelGroup, Draggable, NumericSpinner, Flyout ) {
+    'flyout',
+    'slideshow'
+], function ( Lego, RadioGroup, Tabs, PanelGroup, Draggable, NumericSpinner, Flyout, Slideshow ) {
     var t = new RadioGroup( '.tabs a' );
     var p = new PanelGroup( '.panel', {
         tabGroups: [ t ]
@@ -36,4 +37,6 @@ require([
             alignOffset: -10
         }
     });
+
+    var ss = new Slideshow( '.slideshow-wrapper' );
 });

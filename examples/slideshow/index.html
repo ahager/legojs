@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lego.js Examples</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,700' rel='stylesheet' type='text/css'>
+    <link href='../css/styles.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <h1>Lego.js Slideshow Example</h1>
+
+  <div class="slideshow-wrapper">
+    <div class="slideshow">
+      <div class="thumb-container">
+        <a href="#slide-1" class="slideshow-slide-link thumb-1 active">1</a>
+        <a href="#slide-2" class="slideshow-slide-link thumb-2">2</a>
+        <a href="#slide-3" class="slideshow-slide-link thumb-3">3</a>
+        <a href="#slide-4" class="slideshow-slide-link thumb-4">4</a>
+        <a href="#slide-5" class="slideshow-slide-link thumb-5">5</a>
+      </div>
+      <div class="slideshow-clip">
+        <div class="slideshow-view">
+          <div class="slideshow-slide slide-1 active" data-id="slide-1">1</div>
+          <div class="slideshow-slide slide-2" data-id="slide-2">2</div>
+          <div class="slideshow-slide slide-3" data-id="slide-3">3</div>
+          <div class="slideshow-slide slide-4" data-id="slide-4">4</div>
+          <div class="slideshow-slide slide-5" data-id="slide-5">5</div>
+        </div>
+      </div>
+    </div>
+    <div class="control-panel">
+      <div class="controls">
+        <a href="#" class="slideshow-play-btn fa fa-play"></a>
+        <a href="#" class="slideshow-stop-btn fa fa-stop"></a>
+      </div>
+    </div>
+  </div>
+  <script data-main="../../src/main.js" src="../../node_modules/requirejs/require.js"></script>
+</body>
+</html>
