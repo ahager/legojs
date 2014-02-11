@@ -24,5 +24,7 @@ define( 'namespace', [
 
     Lego.Slideshow = Slideshow;
 
+    window.Lego = Lego;
+
     return Lego;
 });

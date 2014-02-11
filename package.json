@@ -3,12 +3,14 @@
   "description": "Lego JS",
   "version": "0.0.1",
   "npmName": "legojs",
-  "npmFileMap": [{
-    "basePath": "/",
-    "files": [
-      "lego.min.js"
-    ]
-  }],
+  "npmFileMap": [
+    {
+      "basePath": "/",
+      "files": [
+        "lego.min.js"
+      ]
+    }
+  ],
   "author": {
     "name": "Tyler Benziger",
     "url": "http://tybenz.com"
@@ -18,14 +20,11 @@
     "url": "https://github.com/tybenz/legojs.git"
   },
   "devDependencies": {
-    "grunt": "latest",
-    "grunt-contrib-watch": "latest",
-    "grunt-contrib-sass": "latest",
     "requirejs": "~2.1.9",
-    "which": "~1.0.5"
+    "which": "~1.0.5",
+    "amdclean": "~1.1.0"
   },
   "scripts": {
-    "build": "r.js -o build/config.js && cat src/header.js lego.min.js > /tmp/out && mv /tmp/out lego.min.js",
-    "init_bourbon": "bundle install && cd sass && bourbon install"
+    "build": "r.js -o build/config.js && cat src/header.js lego.min.js > /tmp/out && cat /tmp/out | sed \"s/jquery/jQuery/g\" > lego.min.js",
   }
 }
