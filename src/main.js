@@ -16,8 +16,9 @@ require([
     'numeric-spinner',
     'flyout',
     'slideshow',
-    'slider'
-], function ( Lego, RadioGroup, Tabs, PanelGroup, Draggable, NumericSpinner, Flyout, Slideshow, Slider ) {
+    'slider',
+    'colorpicker'
+], function ( Lego, RadioGroup, Tabs, PanelGroup, Draggable, NumericSpinner, Flyout, Slideshow, Slider, Colorpicker ) {
     var t = new RadioGroup( '.tabs a' );
     var p = new PanelGroup( '.panel', {
         tabGroups: [ t ]
@@ -41,9 +42,28 @@ require([
 
     var ss = new Slideshow( '.slideshow-wrapper' );
 
-    var sl = new Slider( '.slider' );
+    var s1 = new Slider( '.slider.horizontal' );
 
-    sl.on( 'slider-update-value', function ( evt, percent ) {
-        $( '.slider-value' ).val( Math.round( percent * 100 ) / 100 );
+    s1.on( 'slider-update-value', function ( evt, data ) {
+        $( '.slider-value-horizontal' ).val( Math.round( data.x * 100 ) / 100 );
+    });
+
+    var s2 = new Slider( '.slider.vertical', { type: 'vertical' } );
+
+    s2.on( 'slider-update-value', function ( evt, data ) {
+        $( '.slider-value-vertical' ).val( Math.round( data.y * 100 ) / 100 );
+    });
+
+    var s3 = new Slider( '.slider.two-dimensional', { type: '2d' } );
+
+    s3.on( 'slider-update-value', function ( evt, data ) {
+        $( '.slider-value-2d-x' ).val( Math.round( data.x * 100 ) / 100 );
+        $( '.slider-value-2d-y' ).val( Math.round( data.y * 100 ) / 100 );
+    });
+
+    var cp = new Colorpicker( '.colorpicker' );
+
+    cp.on( 'colorpicker-update-value', function ( evt, data ) {
+        $( '.rectangle' ).css( 'background-color', 'hsl(' + Math.round( data.h * 365 ) + ', ' + Math.round( data.s * 100 ) + '%, ' + Math.round( data.l * 100 ) + '%)' );
     });
 });

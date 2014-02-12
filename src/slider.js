@@ -21,10 +21,12 @@ function ( Lego, Draggable ) {
             this.rightBoundary = this.$el.width() - this.$thumb.width();
             this.bottomBoundary = this.$el.height() - this.$thumb.height();
 
-            if ( opts.type == 'horizontal' ) {
-                this.draggable = new Draggable( this.$thumb, { ignoreY: true } );
-            } else {
+            if ( opts.type == '2d' ) {
+                this.draggable = new Draggable( this.$thumb );
+            } else if ( opts.type == 'vertical' ){
                 this.draggable = new Draggable( this.$thumb, { ignoreX: true } );
+            } else {
+                this.draggable = new Draggable( this.$thumb, { ignoreY: true } );
             }
 
             this.draggable.on( 'draggable-set-position', function ( evt, data ) {
@@ -47,9 +49,14 @@ function ( Lego, Draggable ) {
 
                 self.draggable.setPosition( x, y );
                 if ( opts.type == 'horizontal' ) {
-                    self.trigger( 'slider-update-value', ( x + ( self.$thumb.width() / 2 ) ) / self.$el.width() );
+                    self.trigger( 'slider-update-value', { x: ( x + ( self.$thumb.width() / 2 ) ) / self.$el.width() } );
+                } else if ( opts.type == 'vertical' ){
+                    self.trigger( 'slider-update-value', { y: ( y + ( self.$thumb.height() / 2 ) ) / self.$el.height() } );
                 } else {
-                    self.trigger( 'slider-update-value', ( y + ( self.$thumb.height() / 2 ) ) / self.$el.height() );
+                    self.trigger( 'slider-update-value', {
+                        x: ( x + ( self.$thumb.width() / 2 ) ) / self.$el.width(),
+                        y: ( y + ( self.$thumb.height() / 2 ) ) / self.$el.height()
+                    });
                 }
             });
         }
