@@ -8,8 +8,9 @@ define( 'namespace', [
     'tabs',
     'panel-group',
     'numeric-spinner',
-    'slideshow'
-], function ( Lego, DragTracker, Draggable, RadioGroup, Tabs, PanelGroup, NumericSpinner, Slideshow ) {
+    'slideshow',
+    'slider'
+], function ( Lego, DragTracker, Draggable, RadioGroup, Tabs, PanelGroup, NumericSpinner, Slideshow, Slider ) {
     Lego.DragTracker = DragTracker;
 
     Lego.Draggable = Draggable;
@@ -23,6 +24,8 @@ define( 'namespace', [
     Lego.NumericSpinner = NumericSpinner;
 
     Lego.Slideshow = Slideshow;
+
+    Lego.Slider = Slider;
 
     window.Lego = Lego;
 

@@ -26,16 +26,21 @@ function ( DragTracker ) {
             this.startTop = parseInt( this.$el.css( 'top' ) );
             this.startLeft = parseInt( this.$el.css( 'left' ) );
 
-            this.setPosition( opts.ignoreX ? null : this.startLeft + dx, opts.ignoreY ? null : this.startTop + dy );
+            this._setPosition( opts.ignoreX ? null : this.startLeft + dx, opts.ignoreY ? null : this.startTop + dy );
         },
 
         dragUpdate: function ( dx, dy ) {
             var opts = this.options;
-            this.setPosition( opts.ignoreX ? null : this.startLeft + dx, opts.ignoreY ? null : this.startTop + dy );
+            this._setPosition( opts.ignoreX ? null : this.startLeft + dx, opts.ignoreY ? null : this.startTop + dy );
         },
 
         dragStop: function ( dx, dy ) {
             this.dragUpdate( dx, dy );
+        },
+
+        _setPosition: function ( x, y ) {
+            this.setPosition( x, y );
+            this.trigger( 'draggable-set-position', { x: x, y: y } );
         },
 
         setPosition: function ( x, y ) {

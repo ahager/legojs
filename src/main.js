@@ -15,8 +15,9 @@ require([
     'draggable',
     'numeric-spinner',
     'flyout',
-    'slideshow'
-], function ( Lego, RadioGroup, Tabs, PanelGroup, Draggable, NumericSpinner, Flyout, Slideshow ) {
+    'slideshow',
+    'slider'
+], function ( Lego, RadioGroup, Tabs, PanelGroup, Draggable, NumericSpinner, Flyout, Slideshow, Slider ) {
     var t = new RadioGroup( '.tabs a' );
     var p = new PanelGroup( '.panel', {
         tabGroups: [ t ]
@@ -39,4 +40,10 @@ require([
     });
 
     var ss = new Slideshow( '.slideshow-wrapper' );
+
+    var sl = new Slider( '.slider' );
+
+    sl.on( 'slider-update-value', function ( evt, percent ) {
+        $( '.slider-value' ).val( Math.round( percent * 100 ) / 100 );
+    });
 });
