@@ -13,6 +13,9 @@
   },
 
   onBuildWrite: function (moduleName, path, contents) {
-    return module.require('amdclean').clean(contents);
+    return module.require('amdclean').clean({
+      'code': contents,
+      'globalObject': true
+    });
   }
 })

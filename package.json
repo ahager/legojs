@@ -25,6 +25,6 @@
     "amdclean": "~1.1.0"
   },
   "scripts": {
-    "build": "r.js -o build/config.js && cat src/header.js lego.min.js > /tmp/out && cat /tmp/out | sed \"s/jquery/jQuery/g\" > lego.min.js",
+    "build": "r.js -o build/config.js && cat src/header.js lego.min.js > /tmp/out && mv /tmp/out lego.min.js"
   }
 }
